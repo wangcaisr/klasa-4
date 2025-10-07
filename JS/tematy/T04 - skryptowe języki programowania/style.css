@@ -1,0 +1,72 @@
+/* Podstawowe style dla całej strony */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Wybór czcionki */
+    color: #333; /* Ciemny szary kolor tekstu dla dobrej czytelności */
+    background-color: #f4f4f4; /* Jasne tło dla całej strony */
+    line-height: 1.6; /* Zwiększona interlínia dla lepszej czytelności akapitów */
+    padding: 20px; /* Dodatkowy margines wewnętrzny wokół całej treści */
+    max-width: 900px; /* Ograniczenie maksymalnej szerokości treści dla lepszego wyglądu na szerokich ekranach */
+    margin: 30px auto; /* Wyśrodkowanie bloku treści na stronie (górny/dolny margines 30px, lewy/prawy auto) */
+    border: 1px solid #ddd; /* Delikatna ramka wokół głównego bloku treści */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtelny cień dla efektu głębi */
+}
+
+/* Styl dla głównego nagłówka */
+h1 {
+    color: #0056b3; /* Niebieski kolor nagłówka */
+    text-align: center; /* Wyśrodkowanie nagłówka */
+    margin-bottom: 25px; /* Margines pod nagłówkiem */
+    font-size: 2.4em; /* Większy rozmiar czcionki dla nagłówka */
+    border-bottom: 2px solid #0056b3; /* Linia podkreślająca nagłówek */
+    padding-bottom: 10px; /* Odstęp między tekstem a linią podkreślającą */
+}
+
+/* Styl dla poziomych linii */
+hr {
+    border: 0; /* Usunięcie domyślnej ramki */
+    height: 1px; /* Ustawienie grubości linii */
+    background-color: #ccc; /* Jasnoszary kolor linii */
+    margin: 40px 0; /* Większe marginesy pionowe wokół linii */
+}
+
+/* Styl dla akapitów */
+p {
+    margin-bottom: 15px; /* Margines pod każdym akapitem */
+    text-align: justify; /* Wyrównanie tekstu do obu krawędzi dla lepszego wyglądu bloków tekstu */
+}
+
+/* Styl dla pogrubionego tekstu (używanego do definicji) */
+p > b, p > strong { /* Celuje w <b> lub <strong> bezpośrednio wewnątrz <p> */
+    font-weight: bold; /* Upewnienie się, że tekst jest pogrubiony */
+    color: #004085; /* Ciemniejszy, wyróżniający kolor */
+}
+
+/* Styl dla list nieuporządkowanych */
+ul {
+    margin-bottom: 20px; /* Margines pod listą */
+    margin-left: 35px; /* Wcięcie dla elementów listy */
+    list-style-type: square; /* Zmiana znacznika listy na kwadratowy */
+}
+
+/* Styl dla elementów listy */
+li {
+    margin-bottom: 8px; /* Mały margines pod każdym elementem listy */
+}
+
+/* Styl dla zagnieżdżonych list (jeśli byłyby potrzebne) */
+ul ul {
+    margin-top: 8px; /* Mały margines nad zagnieżdżoną listą */
+    margin-left: 25px; /* Dodatkowe wcięcie dla zagnieżdżonych elementów */
+    list-style-type: disc; /* Użycie kółka jako znacznika dla zagnieżdżonej listy */
+}
+
+/* Opcjonalnie: styl dla linków, jeśli dodasz */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
