@@ -1,0 +1,253 @@
+/* Reset i podstawowe style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style dla body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Kontener główny */
+body > * {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 0.8s ease;
+}
+
+header h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: 0.9;
+    animation: fadeInUp 0.8s ease;
+}
+
+header hr {
+    border: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    margin-top: 20px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sekcje */
+section {
+    padding: 40px;
+    background: white;
+    animation: fadeIn 1s ease;
+}
+
+section:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Nagłówki w sekcjach */
+section h2 {
+    color: #667eea;
+    font-size: 2em;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+section h3 {
+    color: #764ba2;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+section h4 {
+    color: #555;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Paragrafy */
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Pogrubienie */
+b {
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* Listy */
+ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 10px;
+}
+
+ul li::before {
+    content: '▸';
+    position: absolute;
+    left: -15px;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Linie poziome */
+section hr {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin: 30px 0;
+}
+
+/* Hover efekty */
+section:hover h2::after {
+    width: 120px;
+    transition: width 0.3s ease;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    section h3 {
+        font-size: 1.2em;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+
+/* Animacje */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Dodatkowe style dla lepszej czytelności */
+#wzorceprojektowe,
+#serveryaplikacjiinternetowych {
+    scroll-margin-top: 20px;
+}
+
+/* Link styling (jeśli zostaną dodane) */
+a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}

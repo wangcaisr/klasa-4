@@ -1,0 +1,118 @@
+/* ====== USTAWIENIA BAZOWE ====== */
+:root{
+    --bg: #f7f8fb;
+    --text: #111827;
+    --muted: #4b5563;
+    --accent: #2563eb;
+    --border: #e5e7eb;
+    --th-bg: #eef2ff;
+    --stripe: #f3f4f6;
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --bg: #0c1117;
+        --text: #e5e7eb;
+        --muted: #a1a1aa;
+        --border: #273040;
+        --th-bg: #152033;
+        --stripe: #101824;
+    }
+}
+
+*{ box-sizing: border-box; }
+
+html{ font-size: 16px; }
+
+body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    line-height: 1.6;
+}
+
+/* ====== KONTENER (u Ciebie wszystko jest w <header>) ====== */
+header{
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1.5rem 1.25rem 2rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark){
+    header{ background: #0f141b; box-shadow: none; }
+}
+
+/* ====== TYPOGRAFIA ====== */
+h1{
+    margin: 0 0 .25rem 0;
+    font-size: clamp(1.9rem, 2.8vw, 2.4rem);
+}
+
+h2{
+    margin: .25rem 0 .5rem 0;
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+    color: var(--muted);
+    font-weight: 600;
+}
+
+section h2{
+    margin-top: 1.75rem;
+    color: var(--text);
+}
+
+p{ margin: .4rem 0 .9rem; }
+
+b{ font-weight: 700; }
+
+hr{
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 1rem 0 1.5rem;
+}
+
+/* Lista w sekcji (masz luźne <li> bez <ul>) */
+section > li{
+    list-style: disc;
+    margin: .2rem 0 .2rem 1.25rem;
+}
+
+/* Lepsze łamanie długich wyrazów */
+p, td{
+    hyphens: auto;
+    overflow-wrap: anywhere;
+}
+
+
+/* Zebra */
+tbody tr:nth-child(even) td{ background: var(--stripe); }
+
+
+/* ====== DROBNE INTERAKCJE ====== */
+:focus-visible{
+    outline: 3px solid color-mix(in srgb, var(--accent) 70%, transparent);
+    outline-offset: 2px;
+}
+
+/* ====== RWD ====== */
+@media (max-width: 700px){
+    header{
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    td:first-child, th:first-child{ width: 40%; }
+}
+
+/* ====== DRUK ====== */
+@media print{
+    body{ background: #fff; }
+    header{ border: 0; box-shadow: none; }
+    a[href]::after{ content: " (" attr(href) ")"; font-size: 90%; }
+    tr, img{ break-inside: avoid; }
+}
